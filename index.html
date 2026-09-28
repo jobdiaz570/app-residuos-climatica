@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EcoComunidad: reciclaje y acción climática local" />
+  <title>EcoComunidad | Acción climática</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="EcoComunidad, inicio"><span>♻</span> EcoComunidad</a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#inicio">Inicio</a>
+      <div class="nav-item"><a href="#reciclaje">Reciclaje <span>⌄</span></a><div class="submenu"><a href="#reciclaje">Guía de reciclaje</a><a href="404.html">Plástico</a><a href="404.html">Papel y cartón</a><a href="404.html">Pilas y electrónicos</a></div></div>
+      <div class="nav-item"><a href="#puntos">Puntos de acopio <span>⌄</span></a><div class="submenu"><a href="#puntos">Ver mapa</a><a href="404.html">Pilas</a><a href="404.html">Aceite usado</a><a href="404.html">Residuos orgánicos</a></div></div>
+      <div class="nav-item"><a href="#talleres">Talleres <span>⌄</span></a><div class="submenu"><a href="#talleres">Próximos talleres</a><a href="#talleres">Registrarme</a></div></div>
+      <div class="nav-item"><a href="#huertos">Huertos <span>⌄</span></a><div class="submenu"><a href="#huertos">Huerto La Esperanza</a><a href="#compostaje">Compostaje</a></div></div>
+      <a href="#compostaje">Compostaje</a><div class="nav-item"><a href="#contacto">Contacto <span>⌄</span></a><div class="submenu"><a href="#contacto">Contáctanos</a><a href="#buzon">Buzón comunitario</a><a href="#ayuda">Ayuda</a></div></div>
+    </nav>
+    <div class="header-tools">
+      <label class="search"><span>⌕</span><input id="searchInput" type="search" placeholder="Buscar" aria-label="Buscar en el sitio" /></label>
+      <button class="icon-button" data-modal="helpModal" title="Ayuda">?</button>
+      <button class="icon-button" data-modal="chatPanel" title="Chat">◌</button>
+      <button class="login-link" data-modal="loginModal">Iniciar sesión</button>
+      <button class="outline-button" data-modal="registerModal">Registrarse</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div><p class="eyebrow">CUIDEMOS NUESTRO ENTORNO</p><h1>Acciones pequeñas,<br />cambios grandes</h1><p>Encuentra dónde reciclar, aprende a separar tus residuos y participa en proyectos ambientales de tu comunidad.</p><a class="primary-button" href="#puntos">Encontrar punto de reciclaje <span>→</span></a></div>
+      <div class="hero-art" aria-hidden="true"><div class="sun"></div><div class="hill h1"></div><div class="hill h2"></div><div class="plant">♻</div></div>
+    </section>
+
+    <section class="section quick-actions" aria-label="Acciones principales">
+      <a href="#puntos"><span>⌖</span><b>Encuentra puntos de reciclaje</b><small>Ubica centros cercanos</small></a>
+      <a href="#reciclaje"><span>♻</span><b>Aprende a separar residuos</b><small>Guías prácticas por material</small></a>
+      <a href="#talleres"><span>▣</span><b>Consulta talleres ambientales</b><small>Aprende en comunidad</small></a>
+      <a href="#huertos"><span>✿</span><b>Descubre huertos urbanos</b><small>Conecta con la naturaleza</small></a>
+      <a href="#compostaje"><span>♧</span><b>Aprende sobre compostaje</b><small>Transforma tus orgánicos</small></a>
+    </section>
+
+    <section id="puntos" class="section"><div class="section-heading"><p class="eyebrow">EN TU COMUNIDAD</p><h2>Puntos de reciclaje y proyectos</h2><p>Selecciona un marcador para conocer los materiales y horarios.</p></div>
+      <div class="map-layout"><div class="fake-map" role="application" aria-label="Mapa simulado de puntos comunitarios"><span class="street s1"></span><span class="street s2"></span><span class="street s3"></span><span class="park p1">Parque<br>Central</span>
+        <button class="marker red" data-place="0" style="left:22%;top:30%">♻</button><button class="marker blue" data-place="1" style="left:64%;top:22%">▣</button><button class="marker orange" data-place="2" style="left:76%;top:61%">◉</button><button class="marker green" data-place="3" style="left:35%;top:68%">✿</button><button class="marker brown" data-place="4" style="left:55%;top:48%">♧</button></div>
+        <aside id="placeCard" class="place-card" aria-live="polite"><p class="eyebrow">SELECCIONA UN MARCADOR</p><h3>Conoce tu comunidad</h3><p>Consulta aquí los detalles de cada punto de acopio o proyecto ambiental.</p></aside></div>
+    </section>
+
+    <section id="reciclaje" class="section tinted"><div class="section-heading"><p class="eyebrow">GUÍA BÁSICA</p><h2>¿Cómo separar tus residuos?</h2><p>Un residuo limpio y bien separado puede tener una segunda vida.</p></div><div id="guideCards" class="card-grid guide-grid"></div></section>
+
+    <section id="talleres" class="section"><div class="section-heading"><p class="eyebrow">APRENDE Y PARTICIPA</p><h2>Talleres ambientales</h2></div><div id="workshopCards" class="card-grid workshop-grid"></div></section>
+
+    <section id="huertos" class="split-section section tinted"><div><p class="eyebrow">HUERTOS URBANOS</p><h2>Cultivamos comunidad</h2><p>Los huertos urbanos transforman espacios compartidos en lugares para aprender, cultivar alimentos y convivir.</p><ul><li>Huerto comunitario La Esperanza</li><li>Siembra abierta todos los sábados</li><li>Participación sin experiencia previa</li></ul><button class="primary-button" data-modal="contactModal">Quiero participar</button></div><div class="illustration garden" aria-hidden="true">🌱<span>🌻</span><span>🥬</span><span>🌿</span></div></section>
+    <section id="compostaje" class="split-section section"><div class="illustration compost" aria-hidden="true">🍂<span>🍌</span><span>🌿</span></div><div><p class="eyebrow">COMPOSTAJE</p><h2>Convierte lo orgánico en vida</h2><p>Restos de frutas, verduras, café y hojas secas pueden volver a la tierra como composta.</p><ol><li>Separa tus residuos orgánicos.</li><li>Alterna capas secas y húmedas.</li><li>Revuelve y mantiene la humedad.</li></ol><a class="text-link" href="#reciclaje">Ver guía de orgánicos →</a></div></section>
+
+    <section id="ayuda" class="section tinted"><div class="section-heading"><p class="eyebrow">AYUDA</p><h2>Preguntas frecuentes</h2></div><div class="faq" id="faq"></div></section>
+    <section id="contacto" class="section contact"><div><p class="eyebrow">CONTÁCTANOS</p><h2>Hagamos comunidad</h2><p>¿Conoces un punto de reciclaje o tienes una idea? Escríbenos.</p><div class="contact-info"><p>✉ contacto@ecocomunidad.mx</p><p>☎ 55 1234 5678</p><p>◷ Lunes a viernes, 9:00 a 18:00</p></div></div><form id="contactForm" class="form-card" novalidate data-success="Gracias por contactarnos. Te responderemos pronto."><h3>Envíanos un mensaje</h3><div class="form-row"><label>Nombre<input name="name" autocomplete="name"></label><label>Correo<input name="email" type="email" autocomplete="email"></label></div><label>Teléfono<input name="phone" inputmode="numeric" maxlength="10"></label><label>Mensaje<textarea name="message" rows="4"></textarea></label><button class="primary-button" type="submit">Enviar mensaje</button><p class="form-status"></p></form></section>
+    <section id="buzon" class="section mailbox"><div class="section-heading"><p class="eyebrow">BUZÓN COMUNITARIO</p><h2>Comparte una sugerencia o reporte</h2></div><form id="mailboxForm" class="form-card wide" novalidate data-success="Tu mensaje fue enviado. Gracias por ayudarnos a mejorar."><div class="form-row"><label>Nombre<input name="name"></label><label>Correo<input name="email" type="email"></label></div><label>Asunto<input name="subject"></label><label>Mensaje<textarea name="message" rows="4"></textarea></label><button class="primary-button" type="submit">Enviar mensaje</button><p class="form-status"></p></form></section>
+    <section id="mapa-sitio" class="section site-map tinted"><div class="section-heading"><p class="eyebrow">NAVEGACIÓN</p><h2>Mapa del sitio</h2></div><div class="sitemap-tree"><div><strong>EcoComunidad</strong><ul><li>Inicio</li><li>Puntos de reciclaje<ul><li>Tipos de residuos</li><li>Pilas</li><li>Electrónicos</li><li>Aceite usado</li></ul></li><li>Guía de reciclaje<ul><li>Plástico</li><li>Papel y cartón</li><li>Vidrio</li><li>Residuos orgánicos</li></ul></li></ul></div><div><ul><li>Talleres ambientales</li><li>Huertos urbanos</li><li>Compostaje</li><li>Contacto</li></ul><strong>Herramientas</strong><ul><li>Registrar usuario</li><li>Inicio de sesión</li><li>Recuperar contraseña</li><li>Buzón</li><li>Ayuda</li><li>Chat</li><li>Buscador</li><li>Mapa del sitio</li><li>Contáctanos</li></ul></div></div></section>
+  </main>
+  <footer><a class="brand" href="#inicio"><span>♻</span> EcoComunidad</a><p>Pequeñas acciones, un mejor futuro.</p><a href="#mapa-sitio">Mapa del sitio</a><button data-modal="mailboxModal">Buzón</button></footer>
+
+  <div id="searchResults" class="search-results" hidden></div>
+  <button id="chatBubble" class="chat-bubble" aria-label="Abrir chat">◌</button><aside id="chatPanel" class="chat-panel" hidden><header><b>Asistente EcoComunidad</b><button data-close="chatPanel">×</button></header><div id="chatMessages" class="chat-messages"><p class="bot">¡Hola! ¿En qué puedo orientarte?</p></div><form id="chatForm"><input id="chatInput" placeholder="Escribe tu pregunta..." aria-label="Mensaje de chat"><button>Enviar</button></form></aside>
+
+  <dialog id="registerModal"><button class="close" data-close="registerModal">×</button><form id="registerForm" novalidate data-success="¡Tu cuenta fue creada correctamente!"><h2>Crear cuenta</h2><label>Nombre completo<input name="name"></label><label>Correo electrónico<input name="email" type="email"></label><label>Contraseña<input name="password" type="password"></label><label>Confirmar contraseña<input name="confirmPassword" type="password"></label><div class="form-row"><label>Ciudad<input name="city"></label><label>Código postal<input name="postalCode" inputmode="numeric" maxlength="5"></label></div><button class="primary-button">Crear cuenta</button><p class="form-status"></p></form></dialog>
+  <dialog id="loginModal"><button class="close" data-close="loginModal">×</button><form id="loginForm" novalidate data-success="Inicio de sesión simulado correctamente."><h2>Iniciar sesión</h2><label>Correo electrónico<input name="email" type="email"></label><label>Contraseña<input name="password" type="password"></label><button class="primary-button">Iniciar sesión</button><button type="button" class="text-button" data-modal="recoveryModal">Recuperar contraseña</button><p class="form-status"></p></form></dialog>
+  <dialog id="recoveryModal"><button class="close" data-close="recoveryModal">×</button><form id="recoveryForm" novalidate data-success="Se han enviado instrucciones de recuperación al correo ingresado."><h2>Recuperar contraseña</h2><label>Correo electrónico<input name="email" type="email"></label><button class="primary-button">Enviar instrucciones</button><p class="form-status"></p></form></dialog>
+  <dialog id="workshopModal"><button class="close" data-close="workshopModal">×</button><form id="workshopForm" novalidate data-success="¡Listo! Tu registro al taller fue recibido."><h2 id="workshopTitle">Registro al taller</h2><label>Nombre completo<input name="name"></label><label>Correo electrónico<input name="email" type="email"></label><button class="primary-button">Confirmar registro</button><p class="form-status"></p></form></dialog>
+  <dialog id="contactModal"><button class="close" data-close="contactModal">×</button><div class="modal-copy"><h2>Participa en el huerto</h2><p>Escríbenos desde la sección de contacto y te compartiremos la próxima jornada de siembra.</p><a class="primary-button" href="#contacto" data-close="contactModal">Ir a contacto</a></div></dialog>
+  <dialog id="helpModal"><button class="close" data-close="helpModal">×</button><div class="modal-copy"><h2>¿Necesitas ayuda?</h2><p>Elige una opción o revisa las preguntas frecuentes.</p><div class="help-links"><a href="#puntos" data-close="helpModal">⌖ Encontrar un punto de acopio</a><a href="#reciclaje" data-close="helpModal">♻ Aprender a reciclar</a><button type="button" data-help-chat>◌ Escribir en el chat</button><a href="#ayuda" data-close="helpModal">? Ver preguntas frecuentes</a></div></div></dialog>
+  <dialog id="mailboxModal"><button class="close" data-close="mailboxModal">×</button><div class="modal-copy"><h2>Buzón comunitario</h2><p>Cuéntanos tu propuesta o reporta un nuevo punto de reciclaje.</p><a class="primary-button" href="#buzon" data-close="mailboxModal">Abrir buzón</a></div></dialog>
+  <dialog id="dashboardModal"><button class="close" data-close="dashboardModal">×</button><section class="dashboard"><p class="eyebrow">MI ESPACIO</p><h2>¡Hola, <span id="dashboardName">persona</span>!</h2><p class="dashboard-intro">Tu cuenta EcoComunidad está activa. Desde aquí puedes seguir participando.</p><div class="dashboard-summary"><div><span>♻</span><b>Cuenta creada</b><small>Perfil comunitario activo</small></div><div><span>✿</span><b>Próximo paso</b><small>Inscríbete a un taller ambiental</small></div></div><div class="dashboard-actions"><a class="primary-button" href="#talleres" data-close="dashboardModal">Ver talleres</a><button id="logoutButton" class="logout-button" type="button">Cerrar sesión</button></div></section></dialog>
+  <div id="successAlert" class="success-alert" role="alert" aria-live="assertive" hidden><div class="alert-icon">✓</div><div><strong id="alertTitle">¡Listo!</strong><p id="alertText"></p></div><button id="closeAlert" aria-label="Cerrar aviso">×</button></div>
+  <script src="app.js"></script>
+</body></html>
